@@ -41,10 +41,10 @@ O sistema conta com uma interface moderna, limpa e padronizada, desenvolvida em 
   <tbody>
     <tr>
       <td width="50%">
-        <img src="./login.png" alt="Tela de Login" width="100%">
+        <img src="https://github.com/user-attachments/assets/6729309e-e47b-4e5e-b1c1-cd3380da8a64" alt="Tela de Login" width="100%">
       </td>
       <td width="50%">
-        <img src="./dashboard.png" alt="Dashboard com Clima" width="100%">
+        <img src="https://github.com/user-attachments/assets/3b6bd06b-9185-415b-9028-516fcc15bc79" alt="Dashboard com Clima" width="100%">
       </td>
     </tr>
   </tbody>
@@ -52,9 +52,9 @@ O sistema conta com uma interface moderna, limpa e padronizada, desenvolvida em 
 
 ### Fluxo de Operação (Logística)
 <p align="center">
-  <img src="./registrar doação.png" width="48%" alt="Entrada de Doação">
+  <img src="https://github.com/user-attachments/assets/7cce4ab7-84e1-4c44-a9c3-aba802f8dde8" width="48%" alt="Entrada de Doação">
   &nbsp;
-  <img src="./registrar entrega.png" width="48%" alt="Saída e Entrega">
+  <img src="https://github.com/user-attachments/assets/5c0f686d-e914-4700-8af5-ae1e3675a0f0" width="48%" alt="Saída e Entrega">
 </p>
 
 ---
