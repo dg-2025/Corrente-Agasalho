@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="PageAuditoria.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PageEntradaDoacao.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PageInventario.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PageParametros.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PagePessoas.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PagePontosColeta.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PageSaidaEntrega.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PageUsuarios.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PageVoluntarios.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,199 @@
+﻿<Page x:Class="PageSaidaEntrega"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.openxmlformats.org/expression/blend/2008" 
+      xmlns:local="clr-namespace:Corrente_Agasalho"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="PageSaidaEntrega"
+      Background="Transparent"
+      Loaded="Page_Loaded">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Registrar Entrega (Saída)"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="{StaticResource CorTextoPrincipal}"/>
+            <TextBlock Text="Selecione o beneficiário, adicione peças ao carrinho e escolha o método de saída."
+                       FontSize="16"
+                       Foreground="{StaticResource CorTextoSecundario}"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" 
+                    Style="{StaticResource EstiloCard}" 
+                    Margin="0,0,20,0">
+                <StackPanel>
+                    <TextBlock Text="Beneficiário"
+                               FontSize="18" FontWeight="SemiBold"
+                               Foreground="{StaticResource CorTextoPrincipal}"
+                               Margin="0,0,0,5"/>
+                    <ComboBox x:Name="cmbBeneficiario"
+                              Margin="0,0,0,20"
+                              SelectionChanged="cmbBeneficiario_SelectionChanged"/>
+
+                    <Border x:Name="panelStatsBeneficiario"
+                            Background="{StaticResource CorFundoClaro}"
+                            CornerRadius="8"
+                            Padding="20"
+                            Visibility="Collapsed">
+                        <StackPanel>
+                            <TextBlock Text="Saldo de Pontos Atual"
+                                       FontSize="14"
+                                       Foreground="{StaticResource CorTextoSecundario}"/>
+                            <TextBlock x:Name="txtSaldoPontos"
+                                       Text="0"
+                                       FontSize="48"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource CorAcaoPrimaria}"/>
+
+                            <TextBlock Text="Status"
+                                       FontSize="14"
+                                       Foreground="{StaticResource CorTextoSecundario}"
+                                       Margin="0,15,0,0"/>
+                            <TextBlock x:Name="txtStatusVulnerabilidade"
+                                       Text="NORMAL"
+                                       FontSize="24"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource CorTextoPrincipal}"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="1" 
+                    Style="{StaticResource EstiloCard}"
+                    Padding="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Border x:Name="CardAlertaFrioAtivo"
+                            Grid.Row="0"
+                            Background="{StaticResource CorAcaoPerigo}"
+                            CornerRadius="8,8,0,0"
+                            Padding="20,15"
+                            Visibility="Collapsed">
+                        <TextBlock Text="MODO DE ALERTA DE FRIO ATIVO! Retirada de Peças Essenciais por Troca está BLOQUEADA."
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="{StaticResource CorBranco}"
+                                   TextWrapping="Wrap"/>
+                    </Border>
+                    <DockPanel Grid.Row="1" Margin="30">
+                        <Button x:Name="btnAdicionarAoCarrinho" 
+                                DockPanel.Dock="Right"
+                                Content="Adicionar"
+                                Style="{StaticResource EstiloBotaoPrimario}"
+                                Height="45" Width="120"
+                                Margin="15,0,0,0"
+                                Click="btnAdicionarAoCarrinho_Click"/>
+
+                        <StackPanel DockPanel.Dock="Right" Width="100" Margin="15,0,0,0">
+                            <TextBlock Text="Quantidade" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,0,0,5"/>
+                            <TextBox x:Name="txtQuantidadeRetirar" Text="1" Style="{StaticResource EstiloInputIcone}" Tag="&#xE736;"/>
+                        </StackPanel>
+
+                        <StackPanel>
+                            <TextBlock Text="Item Disponível no Inventário" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,0,0,5"/>
+                            <ComboBox x:Name="cmbItemEstoque"
+                                      SelectionChanged="CmbItemEstoque_SelectionChanged"/>
+                        </StackPanel>
+                    </DockPanel>
+
+                    <DataGrid Grid.Row="2"
+                              x:Name="dgItensSaida"
+                              Margin="30,0,30,0"
+                              BorderThickness="0,1,0,0"
+                              BorderBrush="{StaticResource CorBorda}">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Item (Peça)" Width="*" Binding="{Binding Nome}"/>
+                            <DataGridTextColumn Header="Tamanho" Width="100" Binding="{Binding Tamanho}"/>
+                            <DataGridTextColumn Header="Qtd." Width="60" Binding="{Binding QuantidadeRetirar}"/>
+                            <DataGridTextColumn Header="Custo Unit." Width="100" Binding="{Binding CustoUnitario}"/>
+                            <DataGridTextColumn Header="Custo Total" Width="120" Binding="{Binding CustoTotal}" FontWeight="Bold"/>
+
+                            <DataGridTemplateColumn Width="50">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="btnRemoverDoCarrinho" 
+                                            Content="&#xE74D;" 
+                                            FontFamily="{StaticResource FonteIcones}"
+                                            Foreground="{StaticResource CorAcaoPerigo}"
+                                            Background="Transparent"
+                                            BorderThickness="0"
+                                            Cursor="Hand"
+                                            Click="btnRemoverDoCarrinho_Click"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <Border Grid.Row="3" 
+                            Background="{StaticResource CorFundoClaro}"
+                            BorderBrush="{StaticResource CorBorda}"
+                            BorderThickness="0,1,0,0">
+                        <Grid Margin="20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                                <TextBlock Text="Custo Total da Troca:"
+                                           FontSize="16"
+                                           FontWeight="SemiBold"
+                                           Foreground="{StaticResource CorTextoSecundario}"
+                                           Margin="0,0,10,0"/>
+                                <TextBlock x:Name="txtCustoTotalPontos"
+                                           Text="0"
+                                           FontSize="24"
+                                           FontWeight="Bold"
+                                           Foreground="{StaticResource CorTextoPrincipal}"/>
+                            </StackPanel>
+
+                            <Button x:Name="btnConfirmarDoacaoPura" 
+                                    Grid.Column="1"
+                                    Content="Registrar (Doação Pura)" 
+                                    ToolTip="Registra a saída sem custo de pontos."
+                                    Height="45" Width="180"
+                                    Style="{StaticResource EstiloBotaoDestaque}"
+                                    IsEnabled="False"
+                                    Margin="0,0,10,0"
+                                    Click="btnConfirmarDoacaoPura_Click"/>
+
+                            <Button x:Name="btnConfirmarTroca" 
+                                    Grid.Column="2"
+                                    Content="Registrar (Troca de Pontos)" 
+                                    ToolTip="Debita os pontos do saldo do beneficiário."
+                                    Height="45" Width="200"
+                                    Style="{StaticResource EstiloBotaoPrimario}"
+                                    IsEnabled="False"
+                                    Click="btnConfirmarTroca_Click"/>
+                        </Grid>
+                    </Border>
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,153 @@
+﻿<Page x:Class="PageVoluntarios"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Corrente_Agasalho"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200" 
+      Title="PageVoluntarios"
+      Background="Transparent"
+      Loaded="Page_Loaded">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Cabeçalho -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Monitoramento de Pessoas"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="{StaticResource CorTextoPrincipal}"/>
+            <TextBlock Text="Consulte, filtre e analise o perfil de doadores e beneficiários."
+                       FontSize="16"
+                       Foreground="{StaticResource CorTextoSecundario}"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="600"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Filtros e DataGrid -->
+            <Grid Grid.Column="0" Margin="0,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Card de filtros -->
+                <Border Grid.Row="0" Style="{StaticResource EstiloCard}" Padding="20" Margin="0,0,0,20">
+                    <StackPanel>
+                        <TextBlock Text="Filtros de Pessoas" FontSize="18" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,0,0,10"/>
+                        <WrapPanel>
+                            <StackPanel Margin="0,10,20,0">
+                                <TextBlock Text="Status Vulnerabilidade" FontWeight="SemiBold" Foreground="{StaticResource CorTextoSecundario}" FontSize="12" Margin="0,0,0,5"/>
+                                <ComboBox x:Name="cmbFiltroStatus" Width="180"/>
+                            </StackPanel>
+                            <StackPanel Margin="0,10,20,0">
+                                <TextBlock Text="Cidade" FontWeight="SemiBold" Foreground="{StaticResource CorTextoSecundario}" FontSize="12" Margin="0,0,0,5"/>
+                                <ComboBox x:Name="cmbFiltroCidade" Width="180"/>
+                            </StackPanel>
+                            <StackPanel Margin="0,10,0,0">
+                                <TextBlock Text="Buscar por Nome/Documento" FontWeight="SemiBold" Foreground="{StaticResource CorTextoSecundario}" FontSize="12" Margin="0,0,0,5"/>
+                                <TextBox x:Name="txtBuscaPessoa" Style="{StaticResource EstiloInputIcone}" Tag="&#xE721;" Width="370"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                                <Button x:Name="btnAplicarFiltros" Content="Filtrar" Style="{StaticResource EstiloBotaoPrimario}" Width="150" Margin="0,0,10,0" Click="BtnAplicarFiltros_Click"/>
+                                <Button x:Name="btnLimparFiltros" Content="Limpar" Style="{StaticResource EstiloBotaoPrimario}" Background="{StaticResource CorTextoSecundario}" Width="150" Click="BtnLimparFiltros_Click"/>
+                            </StackPanel>
+                        </WrapPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- DataGrid -->
+                <Border Grid.Row="1" Style="{StaticResource EstiloCard}" Padding="5">
+                    <DataGrid x:Name="DataGridPessoas" IsReadOnly="True" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nome" Width="*" Binding="{Binding Nome}"/>
+                            <DataGridTextColumn Header="Endereço (Cidade)" Width="120" Binding="{Binding Cidade}"/>
+                            <DataGridTextColumn Header="Saldo" Width="60" Binding="{Binding SaldoPontos}"/>
+                            <DataGridCheckBoxColumn Header="Vulnerável?" Width="80" Binding="{Binding IsVulneravel}" ElementStyle="{StaticResource EstiloCheckBoxDataGrid}"/>
+                            <DataGridTextColumn Header="Última Ação" Width="120" Binding="{Binding UltimaMovimentacao}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Border>
+            </Grid>
+
+            <!-- Painel de gráficos -->
+            <Border Grid.Column="1" Style="{StaticResource EstiloCard}" Margin="10,0,0,0" Padding="30">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="20">
+
+                        <!-- Título -->
+                        <TextBlock Text="Dashboard de Pessoas"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   Margin="0,0,0,20"/>
+
+                        <!-- 📊 Gráfico de Pizza -->
+                        <TextBlock Text="PESSOAS EM SITUAÇÃO DE VULNERABILIDADE (POR CIDADE)"
+                   FontSize="14"
+                   FontWeight="SemiBold"
+                   Margin="0,0,0,10"/>
+
+                        <Border Height="250"
+                Background="White"
+                CornerRadius="8"
+                Margin="0,0,0,20"
+                Padding="10">
+                            <Grid>
+                                <Canvas x:Name="CanvasPizzaVulnerabilidade"
+                        Width="200"
+                        Height="200"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"/>
+                            </Grid>
+                        </Border>
+
+                        <!-- 📶 Barras - Pessoas por cidade -->
+                        <TextBlock Text="TOP 10 CIDADES (PESSOAS CADASTRADAS)"
+                   FontSize="14"
+                   FontWeight="SemiBold"
+                   Margin="0,0,0,10"/>
+
+                        <Border Height="250"
+                Background="White"
+                CornerRadius="8"
+                Margin="0,0,0,20"
+                Padding="10">
+                            <StackPanel x:Name="StackPessoasPorCidade"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Bottom"
+                        Height="200"/>
+                        </Border>
+
+                        <!-- 📶 Barras - Saldo ativo -->
+                        <TextBlock Text="TOP 10 CIDADES (PESSOAS COM SALDO ATIVO)"
+                   FontSize="14"
+                   FontWeight="SemiBold"
+                   Margin="0,0,0,10"/>
+
+                        <Border Height="250"
+                Background="White"
+                CornerRadius="8"
+                Padding="10">
+                            <StackPanel x:Name="StackSaldoAtivoPorCidade"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Bottom"
+                        Height="200"/>
+                        </Border>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

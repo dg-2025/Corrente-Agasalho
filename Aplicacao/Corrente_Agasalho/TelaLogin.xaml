@@ -1,0 +1,93 @@
+﻿<Window x:Class="TelaLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Corrente_Agasalho"
+        mc:Ignorable="d"
+        Title="Login - Corrente do Agasalho"
+        Height="720" Width="1280"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        Background="Transparent">
+
+    <Border CornerRadius="10" 
+            Background="{StaticResource CorFundoClaro}"
+            MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+        <Grid>
+            <Button x:Name="btnFechar" Content="&#xE8BB;" 
+                    FontFamily="{StaticResource FonteIcones}"
+                    FontSize="14"
+                    Background="Transparent"
+                    Foreground="{StaticResource CorTextoSecundario}"
+                    Height="40" Width="40"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,10,10,0"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="btnFechar_Click"/>
+
+            <Border x:Name="quadro_login"
+                    Width="450" 
+                    Height="Auto"
+                    Style="{StaticResource EstiloCard}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch">
+
+                    <TextBlock Text="Corrente do Agasalho"
+                               FontSize="32"
+                               FontWeight="Bold"
+                               Foreground="{StaticResource CorTextoPrincipal}"
+                               HorizontalAlignment="Center"
+                               TextAlignment="Center"
+                               TextWrapping="Wrap"/>
+
+                    <TextBlock Text="Faça login para gerenciar o sistema"
+                               FontSize="16"
+                               Foreground="{StaticResource CorTextoSecundario}"
+                               HorizontalAlignment="Center"
+                               Margin="0,10,0,30"/>
+
+                    <TextBlock Text="Usuário" 
+                               Margin="0,15,0,5" 
+                               FontWeight="SemiBold" 
+                               FontSize="14"
+                               Foreground="{StaticResource CorTextoPrincipal}"/>
+
+                    <TextBox x:Name="entrada_usuario"
+                             Style="{StaticResource EstiloInputIcone}"
+                             Tag="&#xE77B;"/>
+                    <TextBlock Text="Senha" 
+                               Margin="0,20,0,5" 
+                               FontWeight="SemiBold" 
+                               FontSize="14"
+                               Foreground="{StaticResource CorTextoPrincipal}"/>
+
+                    <PasswordBox x:Name="entrada_senha"
+                                 Style="{StaticResource EstiloPasswordIcone}"
+                                 Tag="&#xE72E;"/>
+                    <TextBlock x:Name="txtMensagemErro"
+                               Text="Usuário ou senha inválidos."
+                               FontSize="14"
+                               Foreground="{StaticResource CorAcaoPerigo}"
+                               HorizontalAlignment="Center"
+                               Margin="0,20,0,0"
+                               Visibility="Collapsed"/>
+
+                    <Button x:Name="botao_entrar"
+                            Content="ENTRAR"
+                            Click="botao_entrar_Click"
+                            Style="{StaticResource EstiloBotaoPrimario}"
+                            Margin="0,40,0,0"/>
+
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

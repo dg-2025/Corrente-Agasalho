@@ -1,0 +1,181 @@
+﻿<Page x:Class="PageParametros"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Corrente_Agasalho"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="PageParametros"
+      Background="Transparent"
+      Loaded="Page_Loaded">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Parâmetros do Sistema"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="{StaticResource CorTextoPrincipal}"/>
+            <TextBlock Text="Gerencie as categorias, pontos, tamanhos e condições das peças."
+                       FontSize="16"
+                       Foreground="{StaticResource CorTextoSecundario}"/>
+        </StackPanel>
+
+        <Border Grid.Row="1" 
+                Style="{StaticResource EstiloCard}"
+                Padding="0">
+
+            <TabControl Style="{StaticResource EstiloTabModerno}" Padding="30">
+
+                <TabItem Header="Categorias e Pontos">
+                    <Grid Margin="0,20,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0"
+                                Background="{StaticResource CorFundoClaro}"
+                                BorderBrush="{StaticResource CorBorda}"
+                                BorderThickness="1" CornerRadius="8"
+                                Padding="20" Margin="0,0,0,20">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                                    <TextBlock Text="Categoria (Nome)" FontWeight="SemiBold" FontSize="12" Margin="0,0,0,5"/>
+                                    <TextBox x:Name="txtNovaCategoriaNome" Style="{StaticResource EstiloInputIcone}" Tag="&#xE736;"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1" Margin="5,0,10,0">
+                                    <TextBlock Text="Pts. Doação" FontWeight="SemiBold" FontSize="12" Margin="0,0,0,5"/>
+                                    <TextBox x:Name="txtNovaCategoriaPtsDoacao" Style="{StaticResource EstiloInputIcone}" Tag="&#xE8C8;"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="2" Margin="5,0,10,0">
+                                    <TextBlock Text="Pts. Retirada" FontWeight="SemiBold" FontSize="12" Margin="0,0,0,5"/>
+                                    <TextBox x:Name="txtNovaCategoriaPtsRetirada" Style="{StaticResource EstiloInputIcone}" Tag="&#xE8C8;"/>
+                                </StackPanel>
+
+                                <CheckBox x:Name="chkNovaCategoriaEssencial" 
+                                          Grid.Column="3"
+                                          Content="É Peça Essencial?"
+                                          FontWeight="SemiBold"
+                                          VerticalAlignment="Center"
+                                          Margin="10,20,10,0"/>
+
+                                <Button x:Name="btnAdicionarCategoria" 
+                                        Grid.Column="4" 
+                                        Content="Adicionar" 
+                                        Style="{StaticResource EstiloBotaoPrimario}" 
+                                        Height="45" Width="120" Margin="10,20,0,0"
+                                        Click="BtnAdicionarCategoria_Click"/>
+                            </Grid>
+                        </Border>
+
+                        <DataGrid Grid.Row="1"
+                                  x:Name="dgCategorias"
+                                  CanUserAddRows="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Categoria (Nome)" Width="*" Binding="{Binding Nome}"/>
+                                <DataGridTextColumn Header="Pontos (Doação)" Width="150" Binding="{Binding PontosDoacao}"/>
+                                <DataGridTextColumn Header="Pontos (Retirada)" Width="150" Binding="{Binding PontosRetirada}"/>
+                                <DataGridCheckBoxColumn Header="É Peça Essencial?" 
+                                                        Width="150" 
+                                                        Binding="{Binding IsEssencial}"
+                                                        ElementStyle="{StaticResource EstiloCheckBoxDataGrid}"
+                                                        EditingElementStyle="{StaticResource EstiloCheckBoxDataGrid}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <Border Grid.Row="2" 
+                                Background="{StaticResource CorFundoClaro}"
+                                BorderBrush="{StaticResource CorBorda}"
+                                BorderThickness="0,1,0,0" Margin="-30, 20, -30, -30">
+                            <Button x:Name="btnSalvarCategorias" 
+                                    Content="Salvar Alterações" 
+                                    ToolTip="Salva todas as categorias da lista (incluindo as adicionadas)"
+                                    Height="45" Width="180"
+                                    Style="{StaticResource EstiloBotaoPrimario}"
+                                    HorizontalAlignment="Right"
+                                    Margin="20"
+                                    Click="BtnSalvarCategorias_Click"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Tamanhos">
+                    <Grid Margin="0,20,0,0" MaxWidth="500">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBox x:Name="txtNovoTamanho" 
+                                 Grid.Column="0" 
+                                 Style="{StaticResource EstiloInputIcone}" Tag="&#xE736;"/>
+                        <Button x:Name="btnAdicionarTamanho" 
+                                Grid.Column="1" 
+                                Content="Adicionar" 
+                                Style="{StaticResource EstiloBotaoPrimario}" 
+                                Height="45" Width="120" Margin="10,0,0,0"
+                                Click="BtnAdicionarTamanho_Click"/>
+
+                        <ListView x:Name="ListViewTamanhos" 
+                                  Grid.Row="1" Grid.ColumnSpan="2" 
+                                  Margin="0,20,0,0"
+                                  BorderBrush="{StaticResource CorBorda}"
+                                  BorderThickness="1"/>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Condições">
+                    <Grid Margin="0,20,0,0" MaxWidth="500">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBox x:Name="txtNovaCondicao" 
+                                 Grid.Column="0" 
+                                 Style="{StaticResource EstiloInputIcone}" Tag="&#xE946;"/>
+                        <Button x:Name="btnAdicionarCondicao" 
+                                Grid.Column="1" 
+                                Content="Adicionar" 
+                                Style="{StaticResource EstiloBotaoPrimario}" 
+                                Height="45" Width="120" Margin="10,0,0,0"
+                                Click="BtnAdicionarCondicao_Click"/>
+
+                        <ListView x:Name="ListViewCondicoes" 
+                                  Grid.Row="1" Grid.ColumnSpan="2" 
+                                  Margin="0,20,0,0"
+                                  BorderBrush="{StaticResource CorBorda}"
+                                  BorderThickness="1"/>
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+
+        </Border>
+
+    </Grid>
+</Page>

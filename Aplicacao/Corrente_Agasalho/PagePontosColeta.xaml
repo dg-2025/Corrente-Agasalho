@@ -1,0 +1,186 @@
+﻿<Page x:Class="PagePontosColeta"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Corrente_Agasalho"
+      
+      xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+      
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="PagePontosColeta"
+      Background="Transparent"
+      Loaded="Page_Loaded">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Gestão de Pontos de Coleta"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="{StaticResource CorTextoPrincipal}"/>
+            <TextBlock Text="Cadastre, consulte e edite os locais de arrecadação."
+                       FontSize="16"
+                       Foreground="{StaticResource CorTextoSecundario}"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" 
+                    Style="{StaticResource EstiloCard}" 
+                    Margin="0,0,20,0">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" 
+               Text="Pontos Cadastrados"
+               FontSize="18" FontWeight="SemiBold"
+               Foreground="{StaticResource CorTextoPrincipal}"
+               Margin="0,0,0,10"/>
+                    <TextBox DockPanel.Dock="Top"
+             x:Name="txtBuscaPonto"
+             Style="{StaticResource EstiloInputIcone}"
+             Tag="&#xE721;"
+             Margin="0,5,0,15"/>
+
+                    <ListView x:Name="ListViewPontos" 
+              BorderThickness="0"
+              ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="5">
+                                    <TextBlock Text="{Binding Nome}" 
+                               FontSize="15" FontWeight="SemiBold"
+                               Foreground="{StaticResource CorTextoPrincipal}"/>
+                                    <TextBlock Text="{Binding EnderecoResumido}" 
+                               FontSize="13"
+                               Foreground="{StaticResource CorTextoSecundario}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </DockPanel>
+            </Border>
+
+            <Border Grid.Column="1" 
+                    Style="{StaticResource EstiloCard}"
+                    Padding="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto" Margin="0,0,0,0" Padding="30">
+                        <StackPanel>
+                            <TextBlock Text="Nome do Ponto de Coleta" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,0,0,5"/>
+                            <TextBox x:Name="txtNome" Style="{StaticResource EstiloInputIcone}" Tag="&#xE707;"/>
+
+                            <Grid Margin="0,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                                    <TextBlock Text="Responsável" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,0,0,5"/>
+                                    <TextBox x:Name="txtResponsavel" Style="{StaticResource EstiloInputIcone}" Tag="&#xE77B;"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                                    <TextBlock Text="Telefone" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,0,0,5"/>
+
+                                    <xctk:MaskedTextBox x:Name="txtTelefone" 
+                                                        Mask="(00) 00000-0000"
+                                                        Style="{StaticResource EstiloInputIcone}" Tag="&#xE717;"/>
+                                </StackPanel>
+                            </Grid>
+
+                            <TextBlock Text="Endereço (Integração ViaCEP)" FontSize="18" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,30,0,10"/>
+
+                            <TextBlock Text="CEP" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,0,0,5"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <xctk:MaskedTextBox x:Name="txtCEP" 
+                                                    Grid.Column="0" 
+                                                    Mask="00000-000"
+                                                    Style="{StaticResource EstiloInputIcone}" Tag="&#xE707;"/>
+
+                                <Button x:Name="btnBuscarCEP" Grid.Column="1" 
+                                        Content="Buscar CEP" 
+                                        Style="{StaticResource EstiloBotaoPrimario}" 
+                                        Height="45" Width="120" 
+                                        Margin="15,0,0,0"
+                                        Click="BtnBuscarCEP_Click"/>
+                            </Grid>
+
+                            <TextBlock Text="Rua / Logradouro" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,15,0,5"/>
+                            <TextBox x:Name="txtRua" Style="{StaticResource EstiloInputIcone}" Tag="&#xE80F;" IsReadOnly="True" Background="#f0f0f0"/>
+                            <Grid Margin="0,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                                    <TextBlock Text="Número" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,0,0,5"/>
+                                    <TextBox x:Name="txtNumero" Style="{StaticResource EstiloInputIcone}" Tag="&#xE736;"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                                    <TextBlock Text="Complemento" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,0,0,5"/>
+                                    <TextBox x:Name="txtComplemento" Style="{StaticResource EstiloInputIcone}" Tag="&#xE70B;"/>
+                                </StackPanel>
+                            </Grid>
+                            <TextBlock Text="Bairro" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,15,0,5"/>
+                            <TextBox x:Name="txtBairro" Style="{StaticResource EstiloInputIcone}" Tag="&#xE80F;" IsReadOnly="True" Background="#f0f0f0"/>
+                            <Grid Margin="0,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="120"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                                    <TextBlock Text="Cidade" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,0,0,5"/>
+                                    <TextBox x:Name="txtCidade" Style="{StaticResource EstiloInputIcone}" Tag="&#xE80F;" IsReadOnly="True" Background="#f0f0f0"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                                    <TextBlock Text="UF" FontWeight="SemiBold" Foreground="{StaticResource CorTextoPrincipal}" Margin="0,0,0,5"/>
+                                    <TextBox x:Name="txtUF" Style="{StaticResource EstiloInputIcone}" Tag="&#xE80F;" IsReadOnly="True" Background="#f0f0f0"/>
+                                </StackPanel>
+                            </Grid>
+
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <Border Grid.Row="1" 
+                            Background="{StaticResource CorFundoClaro}"
+                            BorderBrush="{StaticResource CorBorda}"
+                            BorderThickness="0,1,0,0">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="20">
+                            <Button x:Name="btnLimpar" Content="Limpar (Novo)" Height="45" Width="150" Margin="0,0,10,0"
+                                    Style="{StaticResource EstiloBotaoPrimario}"
+                                    Background="{StaticResource CorTextoSecundario}"
+                                    Click="BtnLimpar_Click"/>
+                            <Button x:Name="btnInativar" Content="Inativar" Height="45" Width="120" Margin="0,0,10,0"
+                                    Style="{StaticResource EstiloBotaoPerigo}"
+                                    Click="BtnInativar_Click"/>
+                            <Button x:Name="btnSalvar" Content="Salvar" Height="45" Width="150"
+                                    Style="{StaticResource EstiloBotaoPrimario}"
+                                    Click="BtnSalvar_Click"/>
+                        </StackPanel>
+                    </Border>
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

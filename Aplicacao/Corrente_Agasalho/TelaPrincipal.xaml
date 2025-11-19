@@ -1,0 +1,163 @@
+﻿<Window x:Class="TelaPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Corrente_Agasalho"
+        mc:Ignorable="d"
+        Title="Corrente do Agasalho - Sistema de Gestão" 
+        Height="768" Width="1366"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+
+    <Border Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+        <Border CornerRadius="10" Background="{StaticResource CorFundoClaro}">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="280"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0"
+                        Background="{StaticResource CorBranco}"
+                        CornerRadius="10,0,0,10">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="0" Color="#1A202C" Opacity="0.05" BlurRadius="20"/>
+                    </Border.Effect>
+
+                    <DockPanel Margin="0,20,0,20">
+                        <TextBlock DockPanel.Dock="Top"
+                                   Text="Corrente do Agasalho"
+                                   Foreground="{StaticResource CorTextoPrincipal}"
+                                   FontSize="22"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,15,0,30"/>
+
+                        <Button x:Name="btnSair"
+                                DockPanel.Dock="Bottom"
+                                Content="Sair (Logout)"
+                                Height="45"
+                                Style="{StaticResource EstiloBotaoPrimario}"
+                                Background="{StaticResource CorAcaoPerigo}"
+                                Margin="20,10"
+                                Click="btnSair_Click"/>
+
+                        <StackPanel DockPanel.Dock="Top" Margin="0">
+                            <RadioButton x:Name="btnDashboard"
+                                         Content="Dashboard"
+                                         Tag="&#xE80F;" 
+                                         Style="{StaticResource EstiloBotaoNavegacao}"
+                                         GroupName="Nav"
+                                         IsChecked="True"
+                                         Click="btnNavegacao_Click"/>
+
+                            <RadioButton x:Name="btnPessoas"
+                                         Content="Pessoas (Doador/Benef.)"
+                                         Tag="&#xE716;" 
+                                         Style="{StaticResource EstiloBotaoNavegacao}"
+                                         GroupName="Nav"
+                                         Click="btnNavegacao_Click"/>
+                            <RadioButton x:Name="btnVoluntarios"
+                                         Content="Voluntários"
+                                         Tag="&#xE72C;" 
+                                         Style="{StaticResource EstiloBotaoNavegacao}"
+                                         GroupName="Nav"
+                                         Click="btnNavegacao_Click"/>
+                           
+                            
+
+                            <RadioButton x:Name="btnEntrada"
+                                         Content="Registrar Doação (Entrada)"
+                                         Tag="&#xE7B8;" 
+                                         Style="{StaticResource EstiloBotaoNavegacao}"
+                                         GroupName="Nav"
+                                         Click="btnNavegacao_Click"/>
+
+                            <RadioButton x:Name="btnSaida"
+                                         Content="Registrar Entrega (Saída)"
+                                         Tag="&#xE724;" 
+                                         Style="{StaticResource EstiloBotaoNavegacao}"
+                                         GroupName="Nav"
+                                         Click="btnNavegacao_Click"/>
+
+                            <RadioButton x:Name="btnInventario"
+                                         Content="Consultar Inventário"
+                                         Tag="&#xE721;" 
+                                         Style="{StaticResource EstiloBotaoNavegacao}"
+                                         GroupName="Nav"
+                                         Click="btnNavegacao_Click"/>
+                            <Separator Margin="20,15" Background="{StaticResource CorBorda}"/>
+                            
+
+                            <TextBlock Text="ADMINISTRAÇÃO"
+                               Foreground="{StaticResource CorTextoSecundario}"
+                               FontSize="12" FontWeight="Bold"
+                               Margin="20,0,0,10"/>
+
+                            <RadioButton x:Name="btnPontosColeta"
+                                 Content="Pontos de Coleta"
+                                 Tag="&#xE707;" 
+                                 Style="{StaticResource EstiloBotaoNavegacao}"
+                                 GroupName="Nav"
+                                 Click="btnNavegacao_Click"/>
+
+                            <RadioButton x:Name="btnUsuarios"
+                                 Content="Gerenciar Usuários"
+                                 Tag="&#xE77B;" 
+                                 Style="{StaticResource EstiloBotaoNavegacao}"
+                                 GroupName="Nav"
+                                 Click="btnNavegacao_Click"/>
+
+                            <RadioButton x:Name="btnParametros"
+                                 Content="Parâmetros do Sistema"
+                                 Tag="&#xE713;" 
+                                 Style="{StaticResource EstiloBotaoNavegacao}"
+                                 GroupName="Nav"
+                                 Click="btnNavegacao_Click"/>
+
+                            <RadioButton x:Name="btnAuditoria"
+                                 Content="Auditoria e Estornos"
+                                 Tag="&#xE823;" 
+                                 Style="{StaticResource EstiloBotaoNavegacao}"
+                                 GroupName="Nav"
+                                 Click="btnNavegacao_Click"/>
+
+                        </StackPanel>
+                    </DockPanel>
+                </Border>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" 
+                            HorizontalAlignment="Right" VerticalAlignment="Top"
+                            Margin="0,10,10,0">
+                    <Button x:Name="btnMinimizar" Content="&#xE921;" 
+                            FontFamily="{StaticResource FonteIcones}" FontSize="14"
+                            Background="Transparent" Foreground="{StaticResource CorTextoSecundario}"
+                            Height="40" Width="40" BorderThickness="0" Cursor="Hand"
+                            Click="btnMinimizar_Click"/>
+                    <Button x:Name="btnMaximizar" Content="&#xE922;" 
+                            FontFamily="{StaticResource FonteIcones}" FontSize="14"
+                            Background="Transparent" Foreground="{StaticResource CorTextoSecundario}"
+                            Height="40" Width="40" BorderThickness="0" Cursor="Hand"
+                            Click="btnMaximizar_Click"/>
+                    <Button x:Name="btnFechar" Content="&#xE8BB;" 
+                            FontFamily="{StaticResource FonteIcones}" FontSize="14"
+                            Background="Transparent" Foreground="{StaticResource CorTextoSecundario}"
+                            Height="40" Width="40" BorderThickness="0" Cursor="Hand"
+                            Click="btnFechar_Click"/>
+                </StackPanel>
+
+                <Frame Grid.Column="1"
+                       x:Name="MainFrame"
+                       NavigationUIVisibility="Hidden"
+                       Margin="20, 60, 20, 20"/>
+
+            </Grid>
+        </Border>
+    </Border>
+</Window>

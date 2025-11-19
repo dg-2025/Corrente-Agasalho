@@ -1,0 +1,136 @@
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.exe
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.dll.config
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.deps.json
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.runtimeconfig.json
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.pdb
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Xceed.Wpf.Toolkit.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\Npgsql.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.vbproj.AssemblyReference.cache
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageAuditoria.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageDashboard.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageEntradaDoacao.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageInventario.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageParametros.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PagePessoas.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PagePontosColeta.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageSaidaEntrega.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageUsuarios.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\TelaLogin.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\TelaPrincipal.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Application.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho_MarkupCompile.cache
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho_MarkupCompile.lref
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Application.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageAuditoria.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageDashboard.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageEntradaDoacao.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageInventario.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageParametros.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PagePessoas.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PagePontosColeta.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageSaidaEntrega.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageUsuarios.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\TelaLogin.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\TelaPrincipal.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.g.resources
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.AssemblyInfoInputs.cache
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.AssemblyInfo.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.vbproj.CoreCompileInputs.cache
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente.3F798FBE.Up2Date
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\refint\Corrente_Agasalho.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.pdb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.genruntimeconfig.cache
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\ref\Corrente_Agasalho.dll
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageVoluntarios.g.vb
+C:\Users\DG\Documents\test\Corrente_Agasalho\obj\Debug\net8.0-windows\PageVoluntarios.baml
+C:\Users\DG\Documents\test\Corrente_Agasalho\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.exe
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.dll.config
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.deps.json
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.runtimeconfig.json
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Corrente_Agasalho.pdb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Xceed.Wpf.Toolkit.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\Npgsql.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\bin\Debug\net8.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.vbproj.AssemblyReference.cache
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageAuditoria.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageDashboard.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageEntradaDoacao.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageInventario.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageParametros.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PagePessoas.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PagePontosColeta.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageSaidaEntrega.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageUsuarios.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageVoluntarios.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\TelaLogin.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\TelaPrincipal.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Application.g.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho_MarkupCompile.cache
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho_MarkupCompile.lref
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Application.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageAuditoria.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageDashboard.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageEntradaDoacao.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageInventario.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageParametros.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PagePessoas.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PagePontosColeta.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageSaidaEntrega.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageUsuarios.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\PageVoluntarios.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\TelaLogin.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\TelaPrincipal.baml
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.g.resources
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.AssemblyInfoInputs.cache
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.AssemblyInfo.vb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.vbproj.CoreCompileInputs.cache
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente.3F798FBE.Up2Date
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\refint\Corrente_Agasalho.dll
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.pdb
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\Corrente_Agasalho.genruntimeconfig.cache
+C:\Users\DG\Documents\Projetos\Corrente do Agasalho\Aplicacao\Corrente_Agasalho\obj\Debug\net8.0-windows\ref\Corrente_Agasalho.dll
